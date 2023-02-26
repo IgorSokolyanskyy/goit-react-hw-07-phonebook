@@ -10,7 +10,9 @@ export const Item = styled.li`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-width: 320px;
+  min-width: 420px;
+
   padding: 0;
+  margin-right: 15px;
   margin-bottom: 10px;
 `;

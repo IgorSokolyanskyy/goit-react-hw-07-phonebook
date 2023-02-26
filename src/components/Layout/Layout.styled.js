@@ -4,18 +4,19 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 450px;
+  width: 500px;
+  height: 100vh;
   margin: auto;
 
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
-  background-color: rgba(0, 0, 0, 0.468);
+  background-color: rgba(0, 0, 0, 0.6);
 
-  color: rgb(244, 244, 244);
+  color: white;
   font-size: 20px;
 `;
 
 export const Title = styled.h1`
-  margin-top: 8px;
-  margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 8px;
 `;

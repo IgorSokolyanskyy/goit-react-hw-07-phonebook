@@ -1,10 +1,21 @@
 import styled from '@emotion/styled';
 
+export const Box = styled.div`
+  display: flex;
+
+  justify-content: space-between;
+  gap: 95px;
+  align-items: center;
+  margin-bottom: 10px;
+
+  padding-bottom: 10px;
+  border-bottom: 2px solid white;
+`;
+
 export const Label = styled.label`
   display: flex;
   flex-direction: column;
   align-items: content;
-  margin-bottom: 10px;
 `;
 export const Input = styled.input`
   margin-top: 6px;
@@ -24,5 +35,5 @@ export const Input = styled.input`
 
 export const Subtitle = styled.h2`
   font-size: 34px;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 `;

@@ -5,7 +5,7 @@ export const FormList = styled(Form)`
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 0px;
 `;
 
 export const Input = styled(Field)`

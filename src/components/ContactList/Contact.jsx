@@ -1,16 +1,24 @@
 import PropTypes from 'prop-types';
 import { ImCross } from 'react-icons/im';
-import { deleteContact } from 'redux/contactsSlice';
+
 import { useDispatch } from 'react-redux';
+
+import { contactsOperations } from 'redux/contacts';
+
+import { Notify } from 'notiflix';
 
 export default function Contact({ name, number, id }) {
   const dispatch = useDispatch();
-  const handleDelete = () => dispatch(deleteContact(id));
+
+  const handleDelete = () => {
+    dispatch(contactsOperations.deleteContact(id));
+    Notify.success(`"${name}" has been deleted.`);
+  };
 
   return (
     <>
       <p>
-        {name}: {number}
+        <b>{name} :</b> ( {number} )
       </p>
       <ImCross
         onClick={handleDelete}
