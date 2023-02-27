@@ -21,15 +21,21 @@ export default function ContactList() {
 
   return (
     <div style={{ height: '100vh', overflow: 'auto' }}>
-      {isLoading ? <Loader /> : error}
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <List>
+          {visibleContacts.map(({ id, name, number }) => (
+            <Item key={id}>
+              <Contact name={name} number={number} id={id} />
+            </Item>
+          ))}
+        </List>
+      )}
 
-      <List>
-        {visibleContacts.map(({ id, name, number }) => (
-          <Item key={id}>
-            <Contact name={name} number={number} id={id} />
-          </Item>
-        ))}
-      </List>
+      {error && (
+        <p style={{ color: 'red' }}>Sorry, something went wrong, try again.</p>
+      )}
     </div>
   );
 }
