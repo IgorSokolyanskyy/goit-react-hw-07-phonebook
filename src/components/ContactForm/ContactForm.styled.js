@@ -24,6 +24,11 @@ export const Input = styled(Field)`
   &:focus {
     box-shadow: inset 1px 1px 2px #737171, inset -1px -1px 2px #737171;
   }
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    margin: 2px 0;
+  }
 `;
 
 export const Button = styled.button`

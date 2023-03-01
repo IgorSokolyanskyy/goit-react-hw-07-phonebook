@@ -20,22 +20,23 @@ export default function ContactList() {
   }, [dispatch]);
 
   return (
-    <div style={{ height: '100vh', overflow: 'auto' }}>
+    <>
       {isLoading ? (
         <Loader />
       ) : (
-        <List>
-          {visibleContacts.map(({ id, name, number }) => (
-            <Item key={id}>
-              <Contact name={name} number={number} id={id} />
-            </Item>
-          ))}
-        </List>
+        error && (
+          <p style={{ color: 'red' }}>
+            Sorry, something went wrong, try again.
+          </p>
+        )
       )}
-
-      {error && (
-        <p style={{ color: 'red' }}>Sorry, something went wrong, try again.</p>
-      )}
-    </div>
+      <List>
+        {visibleContacts.map(({ id, name, number }) => (
+          <Item key={id}>
+            <Contact name={name} number={number} id={id} />
+          </Item>
+        ))}
+      </List>
+    </>
   );
 }

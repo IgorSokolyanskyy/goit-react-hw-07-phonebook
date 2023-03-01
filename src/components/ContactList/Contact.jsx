@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { ImCross } from 'react-icons/im';
+import { RiDeleteBin2Line } from 'react-icons/ri';
 
 import { useDispatch } from 'react-redux';
 
@@ -20,10 +20,11 @@ export default function Contact({ name, number, id }) {
       <p>
         <b>{name} :</b> ( {number} )
       </p>
-      <ImCross
+
+      <RiDeleteBin2Line
         onClick={handleDelete}
         color="#f13131"
-        size="17px"
+        size="20px"
         cursor="pointer"
         title="Delete contact"
         aria-label="Delete contact"

@@ -4,8 +4,9 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 500px;
-  height: 100vh;
+  max-width: 500px;
+  width: 100%;
+  height: 100%;
   margin: auto;
 
   border-bottom-left-radius: 8px;
@@ -14,6 +15,11 @@ export const Container = styled.div`
 
   color: white;
   font-size: 20px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+    height: 100%;
+  }
 `;
 
 export const Title = styled.h1`
