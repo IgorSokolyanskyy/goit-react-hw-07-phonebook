@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
-import { RiDeleteBin2Line } from 'react-icons/ri';
 
 import { useDispatch } from 'react-redux';
 
 import { contactsOperations } from 'redux/contacts';
 
 import { Notify } from 'notiflix';
+
+import { Icon } from './ContactList.styled';
 
 export default function Contact({ name, number, id }) {
   const dispatch = useDispatch();
@@ -21,11 +22,9 @@ export default function Contact({ name, number, id }) {
         <b>{name} :</b> ( {number} )
       </p>
 
-      <RiDeleteBin2Line
+      <Icon
         onClick={handleDelete}
-        color="#f13131"
-        size="20px"
-        cursor="pointer"
+        size="22px"
         title="Delete contact"
         aria-label="Delete contact"
       />

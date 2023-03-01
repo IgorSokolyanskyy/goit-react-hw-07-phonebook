@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { RiDeleteBin2Line } from 'react-icons/ri';
 
 export const List = styled.ul`
   display: flex;
@@ -30,4 +31,9 @@ export const Item = styled.li`
     margin-right: 0;
     margin-bottom: 8px;
   }
+`;
+
+export const Icon = styled(RiDeleteBin2Line)`
+  color: red;
+  cursor: pointer;
 `;
